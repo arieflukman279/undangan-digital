@@ -1,0 +1,988 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "Montserrat", sans-serif;
+
+    background: #f7f4ee;
+
+    color: #35362f;
+
+    line-height: 1.8;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   VARIABLES
+========================================= */
+
+:root {
+
+    --cream: #f7f4ee;
+
+    --cream-dark: #ebe5d8;
+
+    --green: #4c5a48;
+
+    --green-dark: #303b2e;
+
+    --gold: #a58b5b;
+
+    --text: #35362f;
+
+    --white: #ffffff;
+}
+
+
+/* =========================================
+   GENERAL
+========================================= */
+
+section {
+    position: relative;
+
+    padding: 100px 25px;
+
+    text-align: center;
+}
+
+
+h1,
+h2,
+h3 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-weight: 500;
+}
+
+
+h2 {
+    font-size: clamp(42px, 6vw, 65px);
+
+    line-height: 1.05;
+
+    margin: 15px 0 35px;
+}
+
+
+.section-label {
+    font-size: 11px;
+
+    letter-spacing: 5px;
+
+    text-transform: uppercase;
+
+    color: var(--gold);
+}
+
+
+.ornament {
+    color: var(--gold);
+
+    font-size: 30px;
+
+    margin: 20px 0;
+}
+
+
+/* =========================================
+   COVER
+========================================= */
+
+.cover {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 30px;
+
+    color: white;
+
+    background:
+
+        linear-gradient(
+            rgba(35, 43, 34, .72),
+            rgba(35, 43, 34, .72)
+        ),
+
+        url("../assets/images/cover.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+
+.cover-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 700px;
+
+    width: 100%;
+
+}
+
+
+.small-title {
+
+    font-size: 12px;
+
+    letter-spacing: 6px;
+
+    margin-bottom: 30px;
+}
+
+
+.cover h1 {
+
+    font-size: clamp(65px, 10vw, 110px);
+
+    line-height: .82;
+
+    font-weight: 400;
+
+    margin: 0;
+}
+
+
+.cover h1 span {
+
+    display: block;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: .4em;
+
+    font-style: italic;
+
+    margin: 18px 0;
+}
+
+
+.cover-line {
+
+    width: 80px;
+
+    height: 1px;
+
+    background: var(--gold);
+
+    margin: 35px auto;
+}
+
+
+.cover-date {
+
+    font-size: 13px;
+
+    letter-spacing: 5px;
+}
+
+
+.guest-text {
+
+    margin-top: 70px;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+.open-button {
+
+    margin-top: 20px;
+
+    padding: 14px 32px;
+
+    border: 1px solid rgba(255,255,255,.7);
+
+    border-radius: 50px;
+
+    background: transparent;
+
+    color: white;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+
+.open-button:hover {
+
+    background: white;
+
+    color: var(--green-dark);
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+#main-content {
+
+    display: none;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+
+    max-width: 850px;
+
+    margin: auto;
+
+    padding-top: 130px;
+}
+
+
+.arabic {
+
+    font-size: 25px;
+
+    margin: 25px 0;
+
+    direction: rtl;
+}
+
+
+.quote {
+
+    max-width: 700px;
+
+    margin: 30px auto 10px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 18px;
+
+    font-style: italic;
+
+    color: #62665a;
+}
+
+
+.quote-source {
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    color: var(--gold);
+}
+
+
+.intro {
+
+    max-width: 650px;
+
+    margin: 50px auto 0;
+
+    font-size: 14px;
+
+    color: #5f6159;
+}
+
+
+/* =========================================
+   COUPLE
+========================================= */
+
+.couple {
+
+    background: var(--cream-dark);
+}
+
+
+.couple-container {
+
+    max-width: 1000px;
+
+    margin: 50px auto 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 50px;
+}
+
+
+.person {
+
+    width: 320px;
+}
+
+
+.photo-frame {
+
+    padding: 10px;
+
+    border: 1px solid rgba(165,139,91,.5);
+}
+
+
+.photo-placeholder {
+
+    height: 400px;
+
+    background: #d9d4c8;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: #8c8a81;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+}
+
+
+.person h3 {
+
+    font-size: 35px;
+
+    line-height: 1;
+
+    margin-top: 25px;
+}
+
+
+.parents {
+
+    margin-top: 15px;
+
+    font-size: 12px;
+
+    color: #73746d;
+}
+
+
+.ampersand {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 55px;
+
+    font-style: italic;
+
+    color: var(--gold);
+}
+
+
+/* =========================================
+   COUNTDOWN
+========================================= */
+
+.countdown-section {
+
+    background: var(--green);
+
+    color: white;
+}
+
+
+.countdown-section .section-label {
+
+    color: #d4bd8b;
+}
+
+
+.countdown-section h2 {
+
+    color: white;
+}
+
+
+.date-large {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 25px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 40px;
+}
+
+
+.countdown {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+}
+
+
+.count-box {
+
+    width: 100px;
+
+    padding: 20px 10px;
+
+    border: 1px solid rgba(255,255,255,.25);
+
+    background: rgba(255,255,255,.05);
+}
+
+
+.count-box span {
+
+    display: block;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 45px;
+
+    line-height: 1;
+}
+
+
+.count-box small {
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    opacity: .8;
+}
+
+
+/* =========================================
+   EVENT
+========================================= */
+
+.event {
+
+    background: var(--cream);
+}
+
+
+.event-card {
+
+    max-width: 550px;
+
+    margin: 40px auto 0;
+
+    padding: 55px 35px;
+
+    background: white;
+
+    border: 1px solid #e3ded3;
+
+    box-shadow: 0 15px 50px rgba(50,50,40,.07);
+}
+
+
+.event-icon {
+
+    color: var(--gold);
+
+    font-size: 25px;
+
+    margin-bottom: 15px;
+}
+
+
+.event-card h3 {
+
+    font-size: 38px;
+}
+
+
+.event-date {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 24px;
+}
+
+
+.event-divider {
+
+    width: 50px;
+
+    height: 1px;
+
+    background: var(--gold);
+
+    margin: 25px auto;
+}
+
+
+.location-title {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 25px;
+
+    margin-top: 35px;
+}
+
+
+.location-detail {
+
+    font-size: 12px;
+
+    color: #777;
+}
+
+
+.maps-button {
+
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 12px 25px;
+
+    border: 1px solid var(--green);
+
+    color: var(--green);
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    transition: .3s;
+}
+
+
+.maps-button:hover {
+
+    background: var(--green);
+
+    color: white;
+}
+
+
+.maps-button.disabled {
+
+    opacity: .4;
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   GALLERY
+========================================= */
+
+.gallery {
+
+    background: var(--cream-dark);
+}
+
+
+.gallery-grid {
+
+    max-width: 900px;
+
+    margin: 50px auto 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+
+.gallery-photo {
+
+    height: 350px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #d7d2c7;
+
+    color: #88857b;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================
+   RSVP
+========================================= */
+
+.rsvp {
+
+    max-width: 800px;
+
+    margin: auto;
+}
+
+
+.rsvp-description {
+
+    max-width: 550px;
+
+    margin: -10px auto 45px;
+
+    font-size: 13px;
+
+    color: #707169;
+}
+
+
+#rsvp-form {
+
+    max-width: 550px;
+
+    margin: auto;
+
+    text-align: left;
+}
+
+
+.form-group {
+
+    margin-bottom: 20px;
+}
+
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+input,
+select,
+textarea {
+
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border: 1px solid #d7d3c9;
+
+    background: white;
+
+    border-radius: 3px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 13px;
+
+    outline: none;
+}
+
+
+input:focus,
+select:focus,
+textarea:focus {
+
+    border-color: var(--gold);
+}
+
+
+textarea {
+
+    min-height: 130px;
+
+    resize: vertical;
+}
+
+
+.submit-button {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    background: var(--green);
+
+    color: white;
+
+    font-family: "Montserrat", sans-serif;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+
+.submit-button:hover {
+
+    background: var(--green-dark);
+}
+
+
+/* =========================================
+   CLOSING
+========================================= */
+
+.closing {
+
+    min-height: 70vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: var(--green-dark);
+
+    color: white;
+}
+
+
+.closing-content {
+
+    max-width: 650px;
+}
+
+
+.closing .arabic {
+
+    font-size: 22px;
+}
+
+
+.closing h2 {
+
+    color: white;
+
+    margin-bottom: 25px;
+}
+
+
+.closing-content > p {
+
+    font-size: 13px;
+
+    opacity: .8;
+}
+
+
+.closing-line {
+
+    width: 70px;
+
+    height: 1px;
+
+    background: var(--gold);
+
+    margin: 35px auto;
+}
+
+
+.closing h3 {
+
+    font-size: 30px;
+}
+
+
+.closing h3 span {
+
+    color: var(--gold);
+
+    font-style: italic;
+
+    margin: 0 8px;
+}
+
+
+.closing-date {
+
+    margin-top: 15px;
+
+    letter-spacing: 4px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+
+    section {
+
+        padding: 75px 20px;
+
+    }
+
+
+    .cover h1 {
+
+        font-size: 65px;
+
+    }
+
+
+    .guest-text {
+
+        margin-top: 50px;
+
+    }
+
+
+    .couple-container {
+
+        flex-direction: column;
+
+        gap: 30px;
+
+    }
+
+
+    .person {
+
+        width: min(320px, 90vw);
+
+    }
+
+
+    .photo-placeholder {
+
+        height: 380px;
+
+    }
+
+
+    .ampersand {
+
+        margin: 0;
+
+    }
+
+
+    .countdown {
+
+        gap: 6px;
+
+    }
+
+
+    .count-box {
+
+        width: 75px;
+
+        padding: 15px 5px;
+
+    }
+
+
+    .count-box span {
+
+        font-size: 32px;
+
+    }
+
+
+    .gallery-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .gallery-photo {
+
+        height: 300px;
+
+    }
+
+
+    .event-card {
+
+        padding: 45px 20px;
+
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .cover h1 {
+
+        font-size: 55px;
+
+    }
+
+
+    .count-box {
+
+        width: 68px;
+
+    }
+
+
+    .count-box span {
+
+        font-size: 27px;
+
+    }
+
+}
