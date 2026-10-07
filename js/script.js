@@ -10,120 +10,227 @@ const musicButton = document.getElementById("music-button");
 
 
 /* =========================================
-   OPEN INVITATION
-========================================= */
-
-function openInvitation() {
-
-    // Sembunyikan cover dengan animasi
-    cover.classList.add("hide");
-
-    // Tampilkan tombol musik
-    musicButton.classList.add("active");
-
-    // Mulai musik setelah user melakukan klik
-    if (backgroundMusic) {
-
-        backgroundMusic.volume = 0.35;
-
-        backgroundMusic.play()
-            .then(() => {
-
-                musicButton.classList.add("playing");
-
-            })
-            .catch((error) => {
-
-                console.log(
-                    "Musik tidak dapat diputar otomatis:",
-                    error
-                );
-
-            });
-
-    }
-
-    // Scroll kembali ke atas
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-
-    // Aktifkan reveal animation
-    setTimeout(() => {
-
-        document
-            .querySelectorAll(".section-reveal")
-            .forEach(section => {
-
-                observer.observe(section);
-
-            });
-
-    }, 800);
-
-}
-
-
-/* =========================================
-   MUSIC CONTROL
+   MUSIC STATE
 ========================================= */
 
 let musicPlaying = false;
 
 
-if (backgroundMusic) {
+/* =========================================
+   OPEN INVITATION
+========================================= */
 
-    backgroundMusic.addEventListener("play", () => {
+function openInvitation() {
 
-        musicPlaying = true;
-
-        musicButton.classList.add("playing");
-
-        musicButton.querySelector(".music-icon").textContent = "♫";
-
-    });
+    console.log("Tombol Buka Undangan diklik.");
 
 
-    backgroundMusic.addEventListener("pause", () => {
+    /* -----------------------------------------
+       CLOSE COVER
+    ----------------------------------------- */
 
-        musicPlaying = false;
+    if (cover) {
 
-        musicButton.classList.remove("playing");
+        cover.classList.add("hide");
 
-        musicButton.querySelector(".music-icon").textContent = "♪";
-
-    });
-
-}
+    }
 
 
-if (musicButton) {
+    /* -----------------------------------------
+       SHOW MUSIC BUTTON
+    ----------------------------------------- */
 
-    musicButton.addEventListener("click", () => {
+    if (musicButton) {
 
-        if (!backgroundMusic) return;
+        musicButton.classList.add("active");
+
+    }
 
 
-        if (musicPlaying) {
+    /* -----------------------------------------
+       PLAY MUSIC
+    ----------------------------------------- */
 
-            backgroundMusic.pause();
+    if (backgroundMusic) {
 
-        } else {
+        backgroundMusic.volume = 0.5;
 
-            backgroundMusic.play()
-                .catch(error => {
+        const playPromise = backgroundMusic.play();
+
+
+        if (playPromise !== undefined) {
+
+            playPromise
+                .then(() => {
 
                     console.log(
-                        "Musik gagal diputar:",
+                        "✓ Musik berhasil diputar."
+                    );
+
+                    musicPlaying = true;
+
+                    updateMusicButton();
+
+                })
+                .catch((error) => {
+
+                    console.error(
+                        "✕ Musik gagal diputar:",
                         error
+                    );
+
+                    console.log(
+                        "Pastikan file berada di: assets/music/wedding-song.mp3"
                     );
 
                 });
 
         }
 
+    } else {
+
+        console.error(
+            "✕ Elemen backgroundMusic tidak ditemukan."
+        );
+
+    }
+
+
+    /* -----------------------------------------
+       SCROLL TO TOP
+    ----------------------------------------- */
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
     });
+
+}
+
+
+/* =========================================
+   MUSIC PLAY / PAUSE
+========================================= */
+
+if (backgroundMusic) {
+
+    /* -----------------------------------------
+       MUSIC PLAY EVENT
+    ----------------------------------------- */
+
+    backgroundMusic.addEventListener(
+        "play",
+        function () {
+
+            musicPlaying = true;
+
+            updateMusicButton();
+
+        }
+    );
+
+
+    /* -----------------------------------------
+       MUSIC PAUSE EVENT
+    ----------------------------------------- */
+
+    backgroundMusic.addEventListener(
+        "pause",
+        function () {
+
+            musicPlaying = false;
+
+            updateMusicButton();
+
+        }
+    );
+
+}
+
+
+/* =========================================
+   UPDATE MUSIC BUTTON
+========================================= */
+
+function updateMusicButton() {
+
+    if (!musicButton) return;
+
+
+    const musicIcon =
+        musicButton.querySelector(".music-icon");
+
+
+    if (!musicIcon) return;
+
+
+    if (musicPlaying) {
+
+        musicIcon.textContent = "♫";
+
+        musicButton.classList.add("playing");
+
+    } else {
+
+        musicIcon.textContent = "♪";
+
+        musicButton.classList.remove("playing");
+
+    }
+
+}
+
+
+/* =========================================
+   MUSIC BUTTON CLICK
+========================================= */
+
+if (musicButton) {
+
+    musicButton.addEventListener(
+        "click",
+        function () {
+
+            if (!backgroundMusic) {
+
+                console.error(
+                    "Elemen musik tidak ditemukan."
+                );
+
+                return;
+
+            }
+
+
+            if (musicPlaying) {
+
+                backgroundMusic.pause();
+
+            } else {
+
+                backgroundMusic.volume = 0.5;
+
+                backgroundMusic.play()
+                    .then(() => {
+
+                        console.log(
+                            "✓ Musik dimainkan kembali."
+                        );
+
+                    })
+                    .catch((error) => {
+
+                        console.error(
+                            "✕ Musik gagal dimainkan:",
+                            error
+                        );
+
+                    });
+
+            }
+
+        }
+    );
 
 }
 
@@ -132,7 +239,8 @@ if (musicButton) {
    COUNTDOWN
 ========================================= */
 
-// 29 November 2026, 09.00 WIB
+// 29 November 2026
+// 09.00 WIB
 
 const weddingDate =
     new Date(
@@ -146,16 +254,23 @@ const countdownTimer =
         const now =
             new Date().getTime();
 
+
         const distance =
             weddingDate - now;
 
+
+        /* -----------------------------------------
+           WEDDING DAY
+        ----------------------------------------- */
 
         if (distance <= 0) {
 
             clearInterval(countdownTimer);
 
+
             const countdown =
                 document.querySelector(".countdown");
+
 
             if (countdown) {
 
@@ -171,10 +286,15 @@ const countdownTimer =
 
             }
 
+
             return;
 
         }
 
+
+        /* -----------------------------------------
+           CALCULATE TIME
+        ----------------------------------------- */
 
         const days =
             Math.floor(
@@ -185,27 +305,37 @@ const countdownTimer =
 
         const hours =
             Math.floor(
-                (distance %
-                    (1000 * 60 * 60 * 24)) /
+                (
+                    distance %
+                    (1000 * 60 * 60 * 24)
+                ) /
                 (1000 * 60 * 60)
             );
 
 
         const minutes =
             Math.floor(
-                (distance %
-                    (1000 * 60 * 60)) /
+                (
+                    distance %
+                    (1000 * 60 * 60)
+                ) /
                 (1000 * 60)
             );
 
 
         const seconds =
             Math.floor(
-                (distance %
-                    (1000 * 60)) /
+                (
+                    distance %
+                    (1000 * 60)
+                ) /
                 1000
             );
 
+
+        /* -----------------------------------------
+           ELEMENTS
+        ----------------------------------------- */
 
         const daysElement =
             document.getElementById("days");
@@ -219,6 +349,10 @@ const countdownTimer =
         const secondsElement =
             document.getElementById("seconds");
 
+
+        /* -----------------------------------------
+           UPDATE
+        ----------------------------------------- */
 
         if (daysElement) {
 
@@ -260,36 +394,47 @@ const countdownTimer =
 
 const observer =
     new IntersectionObserver(
+
         function (entries) {
 
-            entries.forEach(entry => {
+            entries.forEach(
+                function (entry) {
 
-                if (entry.isIntersecting) {
+                    if (
+                        entry.isIntersecting
+                    ) {
 
-                    entry.target.classList.add("visible");
+                        entry.target.classList.add(
+                            "visible"
+                        );
+
+                    }
 
                 }
-
-            });
+            );
 
         },
+
         {
             threshold: 0.12
         }
+
     );
 
 
 /* =========================================
-   INITIAL REVEAL
+   INITIAL SCROLL REVEAL
 ========================================= */
 
 document
     .querySelectorAll(".section-reveal")
-    .forEach(section => {
+    .forEach(
+        function (section) {
 
-        observer.observe(section);
+            observer.observe(section);
 
-    });
+        }
+    );
 
 
 /* =========================================
@@ -310,22 +455,32 @@ if (rsvpForm) {
 
 
             const name =
-                document.getElementById("name").value.trim();
+                document
+                    .getElementById("name")
+                    .value
+                    .trim();
 
 
             const attendance =
-                document.getElementById("attendance").value;
+                document
+                    .getElementById("attendance")
+                    .value;
 
 
             const message =
-                document.getElementById("message").value.trim();
+                document
+                    .getElementById("message")
+                    .value
+                    .trim();
 
 
             console.log({
 
-                name,
-                attendance,
-                message
+                name: name,
+
+                attendance: attendance,
+
+                message: message
 
             });
 
@@ -346,7 +501,7 @@ if (rsvpForm) {
 
 
 /* =========================================
-   PREVENT EMPTY MAP BUTTON
+   GOOGLE MAPS BUTTON
 ========================================= */
 
 const mapsButton =
@@ -359,12 +514,17 @@ if (mapsButton) {
         "click",
         function (event) {
 
+            const mapsLink =
+                mapsButton.getAttribute("href");
+
+
             if (
-                !mapsButton.getAttribute("href") ||
-                mapsButton.getAttribute("href") === "#"
+                !mapsLink ||
+                mapsLink === "#"
             ) {
 
                 event.preventDefault();
+
 
                 alert(
                     "Link Google Maps akan ditambahkan."
@@ -376,3 +536,19 @@ if (mapsButton) {
     );
 
 }
+
+
+/* =========================================
+   PAGE READY
+========================================= */
+
+console.log(
+    "✓ Wedding invitation script berhasil dimuat."
+);
+
+console.log(
+    "✓ Musik:",
+    backgroundMusic
+        ? "element ditemukan"
+        : "element TIDAK ditemukan"
+);
