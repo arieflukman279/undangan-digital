@@ -3,108 +3,198 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>M Arief Lukman Nalar & Siti Nuraeni</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="description"
+        content="Undangan Pernikahan M Arief Lukman Nalar & Siti Nuraeni">
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600&family=Italianno&display=swap"
+    <title>Undangan Pernikahan | Arief & Aeni</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600&family=Italianno&family=Playfair+Display:wght@400;500;600&display=swap"
         rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet"
+        href="css/style.css">
+
 </head>
+
 
 <body>
 
+
     <!-- =========================================
-         MUSIC
+         BACKGROUND MUSIC
     ========================================== -->
 
     <audio id="backgroundMusic" loop>
-        <source src="assets/music/wedding-song.mp3" type="audio/mpeg">
+        <source
+            src="assets/music/wedding-song.mp3"
+            type="audio/mpeg">
     </audio>
+
 
 
     <!-- =========================================
          COVER
+         JANGAN DIUBAH
     ========================================== -->
 
-    <section class="cover" id="cover">
+    <section id="cover" class="cover">
 
-        <div class="cover-image"></div>
+        <div class="cover-glow glow-one"></div>
 
-        <div class="cover-overlay"></div>
+        <div class="cover-glow glow-two"></div>
 
-        <div class="cover-decoration decoration-top">
-            ✦
+
+        <div class="floral floral-left">
+
+            <span class="flower flower-a">✿</span>
+
+            <span class="flower flower-b">❀</span>
+
+            <span class="flower flower-c">✿</span>
+
+            <span class="stem"></span>
+
         </div>
+
+
+        <div class="floral floral-right">
+
+            <span class="flower flower-a">✿</span>
+
+            <span class="flower flower-b">❀</span>
+
+            <span class="flower flower-c">✿</span>
+
+            <span class="stem"></span>
+
+        </div>
+
+
+        <div class="arch-frame">
+
+            <div class="arch-inner">
+
+                <div class="person-photo">
+                    <img
+                        src="assets/images/cover.jpeg"
+                        alt="Foto Arief dan Aeni">
+                </div>
+
+
+                <div class="couple-placeholder">
+
+                    <div class="placeholder-person person-left"></div>
+
+                    <div class="placeholder-person person-right"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
 
         <div class="cover-content">
 
-            <p class="cover-label">
-                THE WEDDING OF
+            <p class="cover-small-title">
+                UNDANGAN PERNIKAHAN
             </p>
 
-            <div class="cover-names">
-
-                <h1>
-                    M Arief
-                    <span>Lukman Nalar</span>
-                </h1>
-
-                <div class="cover-and">
-                    &
-                </div>
-
-                <h1>
-                    Siti
-                    <span>Nuraeni</span>
-                </h1>
-
-            </div>
 
             <div class="cover-divider">
+
                 <span></span>
-                <i>❀</i>
+
+                <b>✦</b>
+
                 <span></span>
+
             </div>
+
+
+            <h1 class="couple-name">
+
+                <span>
+                    Arief & Aeni
+                </span>
+
+            </h1>
+
 
             <p class="cover-date">
-                29 · 11 · 2026
+                
             </p>
 
-            <div class="guest">
 
-                <small>
-                    Kepada Yth.
-                </small>
+            <div class="guest-box">
 
-                <strong>
-                    Bapak/Ibu/Saudara/i
-                </strong>
+                <p class="guest-label">
+                    KEPADA YTH.
+                </p>
+
+                <h2>
+                    BAPAK / IBU / SAUDARA / I
+                </h2>
+
+                <div class="guest-name">
+                    Tamu Undangan
+                </div>
+
+                <p class="guest-place">
+                    di Tempat
+                </p>
 
             </div>
 
-            <button class="open-button" onclick="openInvitation()">
 
-                <span>✦</span>
-                Buka Undangan
-                <span>✦</span>
+            <button
+                class="open-button"
+                onclick="openInvitation()">
+
+                <span class="button-icon">
+                    ♡
+                </span>
+
+                <span>
+                    BUKA UNDANGAN
+                </span>
+
+                <span class="button-arrow">
+                    →
+                </span>
 
             </button>
 
+
+            <p class="cover-note">
+
+                Dengan penuh kebahagiaan,
+                kami mengundang Anda
+                untuk menjadi bagian
+                dari hari istimewa kami.
+
+            </p>
+
         </div>
 
-        <div class="cover-decoration decoration-bottom">
-            ❀
-        </div>
+
+        <div class="cover-bottom-gradient"></div>
 
     </section>
+
 
 
     <!-- =========================================
@@ -115,292 +205,441 @@
 
 
         <!-- =====================================
-             HERO
+             INTRO
         ====================================== -->
 
-        <section class="hero section-reveal">
+        <section class="intro-section section-reveal">
 
-            <div class="soft-flower flower-one">✿</div>
-            <div class="soft-flower flower-two">❀</div>
+            <div class="botanical-corner botanical-top-left">
+                ❀
+            </div>
 
-            <div class="section-inner">
+            <div class="botanical-corner botanical-top-right">
+                ❧
+            </div>
 
-                <p class="arabic">
-                    بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
-                </p>
 
-                <div class="tiny-divider">
-                    <span></span>
-                    <i>♡</i>
-                    <span></span>
-                </div>
+            <div class="star star-one">✦</div>
+            <div class="star star-two">✧</div>
+            <div class="star star-three">✦</div>
 
-                <p class="quote">
-                    “Dan di antara tanda-tanda kekuasaan-Nya ialah
-                    Dia menciptakan untukmu pasangan hidup dari
-                    jenismu sendiri supaya kamu merasa tenteram
-                    kepadanya.”
-                </p>
 
-                <p class="quote-source">
-                    QS. Ar-Rum : 21
-                </p>
+            <div class="ornament-small">
+                ❧
+            </div>
 
-                <p class="hero-text">
-                    Dengan memohon rahmat dan ridho Allah SWT,
-                    kami bermaksud menyelenggarakan pernikahan
-                    kami dan mengundang Bapak/Ibu/Saudara/i
-                    untuk hadir serta memberikan doa restu.
-                </p>
 
+            <p class="eyebrow">
+                بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+            </p>
+
+
+            <h2>
+                Dengan memohon
+                <span>
+                    ridho Allah SWT
+                </span>
+            </h2>
+
+
+            <p class="intro-text">
+
+                Dengan segala kerendahan hati,
+                kami bermaksud mengundang
+                Bapak/Ibu/Saudara/i untuk
+                hadir dalam acara pernikahan kami.
+
+            </p>
+
+
+            <div class="intro-bottom-ornament">
+                ✦　❀　✦
             </div>
 
         </section>
+
 
 
         <!-- =====================================
              COUPLE
         ====================================== -->
 
-        <section class="couple section-reveal">
+        <section class="couple-section section-reveal">
+
+            <div class="leaf-decoration leaf-left">
+                ❧
+            </div>
+
+            <div class="leaf-decoration leaf-right">
+                ❧
+            </div>
+
 
             <div class="section-heading">
 
-                <p class="eyebrow">
-                    THE COUPLE
-                </p>
+                <span>
+                    THE BRIDE &amp; GROOM
+                </span>
 
                 <h2>
-                    Dua hati,<br>
-                    <em>satu perjalanan.</em>
+                    Dua hati,
+                    <em>
+                        satu cerita.
+                    </em>
                 </h2>
+
+                <div class="heading-ornament">
+                    ✦ ─── ❀ ─── ✦
+                </div>
 
             </div>
 
 
-            <div class="couple-wrapper">
+            <div class="couple-grid">
 
 
                 <!-- GROOM -->
 
-                <div class="person groom">
+                <div class="person-card">
 
-                    <div class="person-photo">
+                    <div class="person-photo placeholder-photo">
 
-                        <img
-                            src="assets/images/groom.jpg"
-                            alt="M Arief Lukman Nalar"
-                            onerror="this.style.display='none'; this.parentElement.classList.add('photo-empty');"
-                        >
-
-                        <span class="photo-number">
-                            01
+                        <span>
+                            FOTO
                         </span>
 
                     </div>
 
-                    <div class="person-info">
 
-                        <p class="person-role">
-                            THE GROOM
-                        </p>
+                    <p class="person-role">
+                        THE GROOM
+                    </p>
 
-                        <h3>
-                            M Arief<br>
-                            <span>Lukman Nalar</span>
-                        </h3>
 
-                        <p class="parents">
-                            Putra dari<br>
-                            <strong>Bapak & Ibu</strong>
-                        </p>
+                    <h3>
+                        M Arief
+                        <br>
+                        Lukman Nalar
+                    </h3>
 
-                    </div>
+
+                    <p class="person-desc">
+                        Putra dari keluarga tercinta
+                    </p>
 
                 </div>
 
 
-                <!-- CENTER -->
+                <!-- AMPERSAND -->
 
-                <div class="couple-symbol">
-                    <span>&</span>
+                <div class="ampersand">
+
+                    <span>&amp;</span>
+
                 </div>
 
 
                 <!-- BRIDE -->
 
-                <div class="person bride">
+                <div class="person-card">
 
-                    <div class="person-photo">
+                    <div class="person-photo placeholder-photo">
 
-                        <img
-                            src="assets/images/bride.jpg"
-                            alt="Siti Nuraeni"
-                            onerror="this.style.display='none'; this.parentElement.classList.add('photo-empty');"
-                        >
-
-                        <span class="photo-number">
-                            02
+                        <span>
+                            FOTO
                         </span>
 
                     </div>
 
-                    <div class="person-info">
 
-                        <p class="person-role">
-                            THE BRIDE
-                        </p>
+                    <p class="person-role">
+                        THE BRIDE
+                    </p>
 
-                        <h3>
-                            Siti<br>
-                            <span>Nuraeni</span>
-                        </h3>
 
-                        <p class="parents">
-                            Putri dari<br>
-                            <strong>Bapak & Ibu</strong>
-                        </p>
+                    <h3>
+                        Siti
+                        <br>
+                        Nuraeni
+                    </h3>
 
-                    </div>
+
+                    <p class="person-desc">
+                        Putri dari keluarga tercinta
+                    </p>
 
                 </div>
 
+
+            </div>
+
+
+            <div class="cat-decoration cat-couple">
+                🐈‍⬛
             </div>
 
         </section>
+
 
 
         <!-- =====================================
-             DATE / COUNTDOWN
+             QUOTE
         ====================================== -->
 
-        <section class="date-section section-reveal">
+        <section class="quote-section section-reveal">
 
-            <div class="date-background-word">
-                LOVE
+            <div class="quote-pattern"></div>
+
+            <div class="quote-star quote-star-one">
+                ✦
             </div>
 
-            <div class="date-content">
-
-                <p class="eyebrow">
-                    SAVE THE DATE
-                </p>
-
-                <h2>
-                    29 November 2026
-                </h2>
-
-                <p class="date-subtitle">
-                    Minggu · 09.00 WIB
-                </p>
+            <div class="quote-star quote-star-two">
+                ✧
+            </div>
 
 
-                <div class="countdown">
+            <div class="quote-decoration">
+                “
+            </div>
 
-                    <div class="count-item">
-                        <strong id="days">00</strong>
-                        <span>Days</span>
-                    </div>
 
-                    <div class="count-separator">:</div>
+            <blockquote>
 
-                    <div class="count-item">
-                        <strong id="hours">00</strong>
-                        <span>Hours</span>
-                    </div>
+                Dan di antara tanda-tanda
+                kekuasaan-Nya ialah Dia
+                menciptakan untukmu
+                pasangan hidup dari jenismu
+                sendiri.
 
-                    <div class="count-separator">:</div>
+            </blockquote>
 
-                    <div class="count-item">
-                        <strong id="minutes">00</strong>
-                        <span>Minutes</span>
-                    </div>
 
-                    <div class="count-separator">:</div>
+            <p>
+                QS. Ar-Rum : 21
+            </p>
 
-                    <div class="count-item">
-                        <strong id="seconds">00</strong>
-                        <span>Seconds</span>
-                    </div>
 
-                </div>
-
+            <div class="quote-bottom">
+                ✿
             </div>
 
         </section>
+
+
+
+        <!-- =====================================
+             COUNTDOWN
+        ====================================== -->
+
+        <section class="countdown-section section-reveal">
+
+            <div class="countdown-flower flower-left">
+                ❀
+            </div>
+
+            <div class="countdown-flower flower-right">
+                ❀
+            </div>
+
+
+            <div class="countdown-decoration">
+                ✦
+            </div>
+
+
+            <p class="eyebrow">
+                COUNTING THE DAYS
+            </p>
+
+
+            <h2>
+                Menuju hari
+                <em>
+                    bahagia
+                </em>
+            </h2>
+
+
+            <div class="countdown">
+
+
+                <div class="count-item">
+
+                    <strong id="days">
+                        00
+                    </strong>
+
+                    <span>
+                        Hari
+                    </span>
+
+                </div>
+
+
+                <div class="count-line"></div>
+
+
+                <div class="count-item">
+
+                    <strong id="hours">
+                        00
+                    </strong>
+
+                    <span>
+                        Jam
+                    </span>
+
+                </div>
+
+
+                <div class="count-line"></div>
+
+
+                <div class="count-item">
+
+                    <strong id="minutes">
+                        00
+                    </strong>
+
+                    <span>
+                        Menit
+                    </span>
+
+                </div>
+
+
+                <div class="count-line"></div>
+
+
+                <div class="count-item">
+
+                    <strong id="seconds">
+                        00
+                    </strong>
+
+                    <span>
+                        Detik
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="countdown-bottom">
+                ✦　✧　✦
+            </div>
+
+        </section>
+
 
 
         <!-- =====================================
              EVENT
         ====================================== -->
 
-        <section class="event section-reveal">
+        <section class="event-section section-reveal">
 
-            <div class="section-heading">
 
-                <p class="eyebrow">
-                    OUR SPECIAL DAY
-                </p>
-
-                <h2>
-                    Akad Nikah
-                </h2>
-
+            <div class="event-leaf event-leaf-left">
+                ❧
             </div>
+
+            <div class="event-leaf event-leaf-right">
+                ❧
+            </div>
+
+
+            <p class="eyebrow">
+                SAVE THE DATE
+            </p>
+
+
+            <h2>
+                Akad
+                <em>
+                    Pernikahan
+                </em>
+            </h2>
 
 
             <div class="event-card">
 
-                <div class="event-top">
-
-                    <span>
-                        SUNDAY
-                    </span>
-
-                    <div class="event-date-big">
-                        <strong>29</strong>
-                        <small>NOVEMBER<br>2026</small>
-                    </div>
-
-                    <span>
-                        09.00 WIB
-                    </span>
-
+                <div class="event-card-flower">
+                    ✿
                 </div>
 
 
-                <div class="event-line"></div>
-
-
-                <div class="event-place">
-
-                    <p class="event-label">
-                        TEMPAT
-                    </p>
-
-                    <h3>
-                        Rumah Mempelai Wanita
-                    </h3>
-
-                    <p>
-                        Alamat lengkap akan ditambahkan
-                    </p>
-
+                <div class="event-symbol">
+                    ♡
                 </div>
+
+
+                <p class="event-date">
+                    MINGGU
+                </p>
+
+
+                <h3>
+                    29
+                </h3>
+
+
+                <p class="event-month">
+                    NOVEMBER
+                    <br>
+                    2026
+                </p>
+
+
+                <div class="event-divider"></div>
+
+
+                <p class="event-time">
+                    09.00 WIB – SELESAI
+                </p>
+
+
+                <p class="event-location-title">
+                    Rumah Mempelai Wanita
+                </p>
+
+
+                <p class="event-location">
+                    Tempat pelaksanaan
+                    akad pernikahan kami
+                </p>
 
 
                 <a
                     href="#"
-                    class="maps-button"
                     id="maps-button"
-                >
-                    <span>⌖</span>
-                    Lihat Lokasi
+                    class="maps-button">
+
+                    LIHAT LOKASI
+
+                    <span>
+                        ↗
+                    </span>
+
                 </a>
+
+
+                <div class="event-card-bottom">
+                    ✦
+                </div>
 
             </div>
 
+
+            <div class="cat-decoration cat-event">
+                🐈
+            </div>
+
         </section>
+
 
 
         <!-- =====================================
@@ -409,105 +648,117 @@
 
         <section class="gallery-section section-reveal">
 
-            <div class="section-heading gallery-heading">
 
-                <p class="eyebrow">
+            <div class="gallery-decoration gallery-flower-left">
+                ❀
+            </div>
+
+            <div class="gallery-decoration gallery-flower-right">
+                ✿
+            </div>
+
+
+            <div class="section-heading">
+
+                <span>
                     OUR MOMENTS
-                </p>
+                </span>
+
 
                 <h2>
-                    Cerita kecil,<br>
-                    <em>yang akan menjadi kenangan.</em>
+                    Sebuah cerita
+                    <em>
+                        untuk dikenang.
+                    </em>
                 </h2>
 
-            </div>
 
-
-            <div class="gallery">
-
-                <div class="gallery-item gallery-large">
-
-                    <img
-                        src="assets/images/gallery-1.jpg"
-                        alt="Our Moment"
-                        onerror="this.style.display='none'"
-                    >
-
-                </div>
-
-
-                <div class="gallery-item gallery-small">
-
-                    <img
-                        src="assets/images/gallery-2.jpg"
-                        alt="Our Moment"
-                        onerror="this.style.display='none'"
-                    >
-
-                </div>
-
-
-                <div class="gallery-item gallery-tall">
-
-                    <img
-                        src="assets/images/gallery-3.jpg"
-                        alt="Our Moment"
-                        onerror="this.style.display='none'"
-                    >
-
-                </div>
-
-
-                <div class="gallery-item gallery-small">
-
-                    <img
-                        src="assets/images/gallery-4.jpg"
-                        alt="Our Moment"
-                        onerror="this.style.display='none'"
-                    >
-
-                </div>
-
-
-                <div class="gallery-item gallery-wide">
-
-                    <img
-                        src="assets/images/gallery-5.jpg"
-                        alt="Our Moment"
-                        onerror="this.style.display='none'"
-                    >
-
+                <div class="heading-ornament">
+                    ✦ ─── ❀ ─── ✦
                 </div>
 
             </div>
+
+
+            <div class="gallery-grid">
+
+
+                <div class="gallery-item gallery-placeholder">
+                    <span>Foto 01</span>
+                    <i>✦</i>
+                </div>
+
+
+                <div class="gallery-item gallery-placeholder">
+                    <span>Foto 02</span>
+                    <i>✧</i>
+                </div>
+
+
+                <div class="gallery-item gallery-placeholder">
+                    <span>Foto 03</span>
+                    <i>✦</i>
+                </div>
+
+
+                <div class="gallery-item gallery-placeholder">
+                    <span>Foto 04</span>
+                    <i>✧</i>
+                </div>
+
+
+                <div class="gallery-item gallery-placeholder">
+                    <span>Foto 05</span>
+                    <i>✦</i>
+                </div>
+
+
+            </div>
+
 
         </section>
+
 
 
         <!-- =====================================
              RSVP
         ====================================== -->
 
-        <section class="rsvp section-reveal">
+        <section class="rsvp-section section-reveal">
 
-            <div class="rsvp-inner">
 
-                <p class="eyebrow">
-                    RSVP
-                </p>
+            <div class="rsvp-flower rsvp-flower-left">
+                ❀
+            </div>
 
-                <h2>
-                    Kehadiran Anda<br>
-                    <em>adalah kebahagiaan bagi kami.</em>
-                </h2>
+            <div class="rsvp-flower rsvp-flower-right">
+                ❀
+            </div>
 
-                <p class="rsvp-text">
-                    Mohon konfirmasi kehadiran
-                    Bapak/Ibu/Saudara/i.
-                </p>
+
+            <p class="eyebrow">
+                YOUR PRESENCE
+            </p>
+
+
+            <h2>
+                Kehadiranmu
+                <em>
+                    berarti bagi kami.
+                </em>
+            </h2>
+
+
+            <div class="rsvp-card">
+
+
+                <div class="rsvp-card-top">
+                    ✦
+                </div>
 
 
                 <form id="rsvp-form">
+
 
                     <div class="input-group">
 
@@ -515,26 +766,30 @@
                             Nama
                         </label>
 
+
                         <input
                             type="text"
                             id="name"
                             placeholder="Tuliskan nama Anda"
-                            required
-                        >
+                            required>
 
                     </div>
+
 
 
                     <div class="input-group">
 
                         <label for="attendance">
-                            Kehadiran
+                            Konfirmasi Kehadiran
                         </label>
 
-                        <select id="attendance" required>
+
+                        <select
+                            id="attendance"
+                            required>
 
                             <option value="">
-                                Pilih konfirmasi
+                                Pilih jawaban
                             </option>
 
                             <option value="Hadir">
@@ -542,7 +797,7 @@
                             </option>
 
                             <option value="Tidak Hadir">
-                                Saya tidak dapat hadir
+                                Maaf, saya tidak dapat hadir
                             </option>
 
                         </select>
@@ -550,75 +805,115 @@
                     </div>
 
 
+
                     <div class="input-group">
 
                         <label for="message">
-                            Pesan & Doa
+                            Ucapan &amp; Doa
                         </label>
+
 
                         <textarea
                             id="message"
                             rows="4"
-                            placeholder="Tuliskan pesan atau doa untuk kami..."
-                        ></textarea>
+                            placeholder="Tuliskan ucapan untuk kami..."></textarea>
 
                     </div>
 
 
+
                     <button
                         type="submit"
-                        class="submit-button"
-                    >
-                        Kirim Konfirmasi
-                        <span>→</span>
+                        class="rsvp-button">
+
+                        <span>
+                            KIRIM KONFIRMASI
+                        </span>
+
+                        <b>
+                            ♡
+                        </b>
+
                     </button>
+
 
                 </form>
 
+
+                <div class="rsvp-card-bottom">
+                    ✿　✦　✿
+                </div>
+
             </div>
 
+
         </section>
+
 
 
         <!-- =====================================
              CLOSING
         ====================================== -->
 
-        <section class="closing section-reveal">
+        <section class="closing-section">
 
-            <div class="closing-decoration">
-                ✦
+
+            <div class="closing-stars">
+                ✦　✧　✦
             </div>
 
-            <p class="arabic">
-                جَزَاكُمُ اللَّهُ خَيْرًا
+
+            <div class="closing-flower">
+                ✿
+            </div>
+
+
+            <p class="eyebrow">
+                THANK YOU
             </p>
+
 
             <h2>
-                Terima Kasih
+                Sampai jumpa
+                <em>
+                    di hari bahagia kami.
+                </em>
             </h2>
 
+
             <p>
-                Atas doa, perhatian, dan kehadiran
-                Bapak/Ibu/Saudara/i dalam hari bahagia kami.
+                M Arief Lukman Nalar
+                <br>
+                &amp;
+                <br>
+                Siti Nuraeni
             </p>
 
-            <div class="closing-names">
 
-                M Arief Lukman Nalar
-                <span>&</span>
-                Siti Nuraeni
-
+            <div class="closing-symbol">
+                ♡
             </div>
 
-            <div class="closing-date">
-                29 · 11 · 2026
+
+            <div class="closing-cat">
+                🐈‍⬛
             </div>
+
+
+            <div class="closing-leaves closing-leaves-left">
+                ❧
+            </div>
+
+            <div class="closing-leaves closing-leaves-right">
+                ❧
+            </div>
+
 
         </section>
 
 
     </main>
+
 
 
     <!-- =========================================
@@ -628,11 +923,10 @@
     <button
         id="music-button"
         class="music-button"
-        aria-label="Kontrol musik"
-    >
+        aria-label="Kontrol musik">
 
         <span class="music-icon">
-            ♫
+            ♪
         </span>
 
         <span class="music-text">
@@ -642,8 +936,11 @@
     </button>
 
 
-    <!-- JS -->
+
+    <!-- JAVASCRIPT -->
+
     <script src="js/script.js"></script>
+
 
 </body>
 
